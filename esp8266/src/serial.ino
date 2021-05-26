@@ -1,8 +1,13 @@
-#include <ESP8266WiFi.h>
+#include <TM1637Display.h>
 #include <ESPAsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 #include <LittleFS.h>
 #include <Wire.h>
+#include <Arduino.h>
+
+#define CLK 1
+#define DIO 2
+TM1637Display display(CLK, DIO);
 
 const char* ssid = "Pentagon";
 const char* password = "flatronslim";
@@ -14,6 +19,7 @@ AsyncWebServer server(80);
 //String processor(){
 
 //}
+
 void setup(){
     Serial.begin(115200);
 // Serial port for debugging purposes
@@ -29,13 +35,16 @@ void setup(){
     return;
   }
 
-//What server do when client call a function
+// What server do when client call a function
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(LittleFS, "/timer.html");
   });
 
   server.begin();
+  display.clear();
+  display.setBrightness(0x0f);
 }
 void loop(){
+  display.showNumberDec(-12); 
 
 }

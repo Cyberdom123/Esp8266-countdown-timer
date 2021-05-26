@@ -28,10 +28,19 @@
 	"buffers":
 	[
 		{
+			"file": "data/timer.html",
+			"settings":
+			{
+				"buffer_size": 892,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "src/serial.ino",
 			"settings":
 			{
-				"buffer_size": 2217,
+				"buffer_size": 944,
 				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": "/*"
@@ -89,6 +98,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"upload",
+				"Build With: PlatformIO - Upload"
+			],
 			[
 				"build",
 				"Build With: PlatformIO - Upload"
@@ -172,8 +185,8 @@
 	},
 	"expanded_folders":
 	[
-		"/home/dom/esp8266",
-		"/home/dom/esp8266/data"
+		"/home/dom/esp8266/esp8266",
+		"/home/dom/esp8266/esp8266/data"
 	],
 	"file_history":
 	[
@@ -243,19 +256,55 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/serial.ino",
+					"file": "data/timer.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2217,
+						"buffer_size": 892,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1156,
-								1156
+								174,
+								174
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "src/serial.ino",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 944,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
 							]
 						],
 						"settings":
@@ -266,7 +315,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 414.0,
+						"translation.y": 57.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -292,11 +341,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -338,7 +394,7 @@
 		[
 			[
 				"",
-				"~/esp8266/platformio.sublime-project"
+				"~/web_env/Django.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -352,7 +408,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
