@@ -3,39 +3,86 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+
 <style>
+body {
+  background-color: black;
+  color: #8dcaf5;
+}
 p {
   text-align: center;
   font-size: 60px;
   margin-top: 0px;
+}
+
+input, select {
+  width: 20%;
+  padding-left: 40px;
+  margin-left: 40px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type=submit] {
+  width: 20%;
+  background-color: #8dcaf5;
+  color: white;
+  margin-left: 40px;
+  padding: 14px 20px;
+  padding-left: 40px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 </style>
 </head>
 <body>
   <div id="container">
     <!-- counter  -->
-    <div id="counter"></div>
+    <div id="counter">
+      <div id="time" data-animate="slide" style="font-size: 80px" data-role="countdown" data-hours="0"></div>
+    </div>
 
      <!-- fields for study and breake time -->
+    <div id="wrapper">
     <form name="formname" onsubmit="return false">
-    <label>Study time</label>
-    <input type="text" name="Study" id="Study" value="2"/>
-    <label>Break Time</label> 
-    <input type="text" id="Break">
-    <button onclick="timer()">OK</button>
+    <label>Study time</label><br>
+    <input type="text" name="Study" id="Study" value="20"/><br>
+    <label>Break Time</label><br>
+    <input type="text" name="Break" id="Break" value="20"><br>
+    <button type="submit" onclick="timer()">OK</button><br>
     </form>
+    </div>
   </div>
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js">
+</script>
 <script>
- // function timer() {
+  function timer() {
+
     var StudyTime = document.getElementById("Study").value;
     var BreakTime = document.getElementById("Break").value;
 
     var tag_id = document.getElementById('counter');
-    tag_id.innerHTML = '<div data-role="countdown" data-hours="' + StudyTime + '"></div>';;
- // }
+    tag_id.innerHTML = '<div id="time" data-animate="slide" style="font-size: 80px" data-role="countdown" data-seconds="' + StudyTime + '"></div><br><p>Study</p>';
+
+    var TimeToEnd = StudyTime;
+    var delay = setInterval(count, 1000);
+    function count() {
+    if(TimeToEnd == 0){
+      console.log("done");
+      tag_id.innerHTML = '<div id="time" data-animate="slide" style="font-size: 80px" data-role="countdown" data-seconds="' + BreakTime + '"></div><br><p>Break</p>';
+      TimeToEnd = BreakTime;
+    }else{
+      TimeToEnd--;
+      console.log(TimeToEnd);
+    }}
+
+    }
 </script>
-
-<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-
 </body>
 </html>
