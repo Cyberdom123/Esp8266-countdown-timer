@@ -20,7 +20,7 @@
 						"run"
 					],
 					"file_regex": "^(..[^:\n]*):([0-9]+):?([0-9]+)?:? (.*)$",
-					"name": "Build"
+					"name": "Build",
 				},
 				{
 					"cmd":
@@ -32,7 +32,7 @@
 						"upload"
 					],
 					"file_regex": "^(..[^:\n]*):([0-9]+):?([0-9]+)?:? (.*)$",
-					"name": "Upload"
+					"name": "Upload",
 				},
 				{
 					"cmd":
@@ -44,7 +44,7 @@
 						"clean"
 					],
 					"file_regex": "^(..[^:\n]*):([0-9]+):?([0-9]+)?:? (.*)$",
-					"name": "Clean"
+					"name": "Clean",
 				},
 				{
 					"cmd":
@@ -54,7 +54,7 @@
 						"test"
 					],
 					"file_regex": "^(..[^:\n]*):([0-9]+):?([0-9]+)?:? (.*)$",
-					"name": "Test"
+					"name": "Test",
 				},
 				{
 					"cmd":
@@ -66,7 +66,7 @@
 						"uploadfs"
 					],
 					"file_regex": "^(..[^:\n]*):([0-9]+):?([0-9]+)?:? (.*)$",
-					"name": "Upload SPIFFS image"
+					"name": "Upload SPIFFS image",
 				},
 				{
 					"cmd":
@@ -76,7 +76,7 @@
 						"update"
 					],
 					"file_regex": "^(..[^:\n]*):([0-9]+):?([0-9]+)?:? (.*)$",
-					"name": "Update platforms and libraries"
+					"name": "Update platforms and libraries",
 				},
 				{
 					"cmd":
@@ -85,24 +85,24 @@
 						"-c", "sublimetext",
 						"upgrade"
 					],
-					"name": "Upgrade PlatformIO Core"
+					"name": "Upgrade PlatformIO Core",
 				}
 			],
 			"working_dir": "${project_path:${folder}}",
-			"selector": "source.c, source.c++"
+			"selector": "source.c, source.c++",
 		}
 	],
 	"folders":
 	[
 		{
-			"path": "."
-		}
+			"path": ".",
+		},
 	],
     "settings":
     {
          "sublimegdb_workingdir": "/home/dom/esp8266",
          "sublimegdb_exec_cmd": "",
-         "sublimegdb_commandline": "/home/dom/.local/bin/pio -f -c sublimetext debug --interface=gdb --interpreter=mi -x .pioinit"
+         "sublimegdb_commandline": "/home/dom/.local/bin/pio -f -c sublimetext debug --interface=gdb --interpreter=mi -x .pioinit",
 
-    }
+    },
 }

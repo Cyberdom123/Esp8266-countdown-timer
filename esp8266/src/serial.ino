@@ -45,6 +45,10 @@ void setup(){
   display.setBrightness(0x0f);
 }
 void loop(){
-  display.showNumberDec(-12); 
+  for (int i = 0; i < 9999; ++i)
+  {
+    display.showNumberDec(i);
+    delay(500); 
+  }
 
 }
