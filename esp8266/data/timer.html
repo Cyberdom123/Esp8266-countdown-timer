@@ -3,11 +3,12 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
-
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js">
+</script>
 <style>
 body {
   background-color: black;
-  color: #8dcaf5;
+  color: #86f4ff;
 }
 p {
   text-align: center;
@@ -15,26 +16,18 @@ p {
   margin-top: 0px;
 }
 
-input, select {
-  width: 20%;
-  padding-left: 40px;
-  margin-left: 40px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+#fields {
+  width: 400px;
+  margin-left:80px;
+  margin-top:50px;
 }
 
-button[type=submit] {
-  width: 20%;
+button {
+  width: 10%;
   background-color: #8dcaf5;
   color: white;
-  margin-left: 40px;
+  margin-left: 90px;
   padding: 14px 20px;
-  padding-left: 40px;
-  margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -45,44 +38,41 @@ button[type=submit] {
   <div id="container">
     <!-- counter  -->
     <div id="counter">
-      <div id="time" data-animate="slide" style="font-size: 80px" data-role="countdown" data-hours="0"></div>
+      <div id="time" data-start="false" data-animate="slide" style="font-size: 80px" data-role="countdown" data-seconds="1"></div>
     </div>
 
      <!-- fields for study and breake time -->
-    <div id="wrapper">
-    <form name="formname" onsubmit="return false">
+    <div id="fields">
+    <form class="fields" name="formname" onsubmit="return false">
     <label>Study time</label><br>
-    <input type="text" name="Study" id="Study" value="20"/><br>
+    <input class="fields" data-role="timepicker" data-value="1" name="Study" id="Study" data-on-set="myLib.time.set"/><br>
     <label>Break Time</label><br>
-    <input type="text" name="Break" id="Break" value="20"><br>
-    <button type="submit" onclick="timer()">OK</button><br>
-    </form>
+    <input data-role="timepicker" data-value="1" name="Break" id="Break"><br>
     </div>
+    <button onclick="$('#time').data('countdown').start()">Start</button>
+    <button onclick="$('#time').data('countdown').pause()">Stop</button>
   </div>
-<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js">
-</script>
-<script>
-  function timer() {
 
-    var StudyTime = document.getElementById("Study").value;
-    var BreakTime = document.getElementById("Break").value;
+<script>
+    //Sttudy counter
+    var myLib = {
+      time: {
+          set: function(val){
 
     var tag_id = document.getElementById('counter');
-    tag_id.innerHTML = '<div id="time" data-animate="slide" style="font-size: 80px" data-role="countdown" data-seconds="' + StudyTime + '"></div><br><p>Study</p>';
+    tag_id.innerHTML = '<div class="timer" data-start="false" id="time" data-animate="slide" style="font-size: 80px" data-role="countdown" data-on-alarm="Break()" data-hours="'+ val[0] +'" data-minutes="'+ val[1] +'" data-seconds="' + val[2] + '"></div><br><p>Study</p>';
+              }
+        }
+    }
+    //break counting
+    function Break() {
+      var BreakTime = document.getElementById("Break").value;
 
-    var TimeToEnd = StudyTime;
-    var delay = setInterval(count, 1000);
-    function count() {
-    if(TimeToEnd == 0){
-      console.log("done");
-      tag_id.innerHTML = '<div id="time" data-animate="slide" style="font-size: 80px" data-role="countdown" data-seconds="' + BreakTime + '"></div><br><p>Break</p>';
-      TimeToEnd = BreakTime;
-    }else{
-      TimeToEnd--;
-      console.log(TimeToEnd);
-    }}
+      var tag_id = document.getElementById('counter');
+      tag_id.innerHTML = '<div class="timer" id="time" data-animate="slide" style="font-size: 80px" data-role="countdown"  data-hours="'+ BreakTime[0] + BreakTime[1] +'" data-minutes="'+ BreakTime[3] + BreakTime[4] +'" data-seconds="' + BreakTime[6] + BreakTime[7] + '"></div><br><p>Break</p>';
 
     }
+
 </script>
 </body>
 </html>
