@@ -3,74 +3,28 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
-<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js">
+ <!-- this --><script src="https://cdn.metroui.org.ua/v4/js/metro.min.js">
 </script>
-<style>
-body {
-  background-color: black;
-  color: #86f4ff;
-}
-p {
-  text-align: center;
-  font-size: 60px;
-  margin-top: 0px;
-}
-
-#fields {
-  width: 400px;
-  margin-left:80px;
-  margin-top:50px;
-}
-
-button {
-  width: 10%;
-  background-color: #8dcaf5;
-  color: white;
-  margin-left: 90px;
-  padding: 14px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-</style>
-</head>
+<link rel="stylesheet" href="style.css">
+<script src="timer.js"></script>
+</head> 
 <body>
   <div id="container">
     <!-- counter  -->
+    <div id="test" data-minutes = "1">test</div>
     <div id="counter">
-      <div id="time" data-start="false" data-animate="slide" style="font-size: 80px" data-role="countdown" data-seconds="1"></div>
+      <div id="time" data-start="false" data-animate="slide" style="font-size: 80px" data-role="countdown"></div>
     </div>
 
      <!-- fields for study and breake time -->
     <div id="fields">
-<!-- <form class="fields" name="formname" onsubmit="return false"> -->
     <label>Study time</label><br>
-    <input class="fields" data-role="timepicker" data-value="01:00:00" name="Study" id="Study" /><br>
+    <input data-role="timepicker" data-value="01:00:00" name="Study" id="Study" /><br>
     <label>Break Time</label><br>
-    <input class="fields" data-role="timepicker" data-value="00:15:00" name="Break" id="Break"><br>
+    <input data-role="timepicker" data-value="00:15:00" name="Break" id="Break"><br>
     </div>
     <button onclick="Study()">Start</button>
-    <button onclick="Stop($('#time').data('countdown').getLeft().seconds)">Stop</button><br>
-<script>
-    //Study counter
-    function Study() {
-      var StudyTime = document.getElementById("Study").value;
-
-      var tag_id = document.getElementById('counter');
-      tag_id.innerHTML = '<div id="time" data-animate="slide" style="font-size: 80px" data-role="countdown" data-on-alarm="Break()" data-hours="'+ StudyTime[0] + StudyTime[1] +'" data-minutes="'+ StudyTime[3] + StudyTime[4] +'" data-seconds="' + StudyTime[6] + StudyTime[7] + '"></div><br><p>Study</p>';
-    }
-    //Break counting
-    function Break() {
-      var BreakTime = document.getElementById("Break").value;
-
-      var tag_id = document.getElementById('counter');
-      tag_id.innerHTML = '<div  id="time" data-animate="slide" style="font-size: 80px" data-role="countdown"  data-hours="'+ BreakTime[0] + BreakTime[1] +'" data-minutes="'+ BreakTime[3] + BreakTime[4] +'" data-seconds="' + BreakTime[6] + BreakTime[7] + '"></div><br><p>Break</p>';
-    }
-    //Stop function
-    function Stop(timeleft) {
-      console.log(timeleft);
-    }
-
-</script>
+      <!--  <button onclick="Stop($('#time').data('countdown').getLeft().seconds)">Stop</button><br> -->
+    <button onclick="pause(true)">Stop</button><br>
 </body>
 </html>
