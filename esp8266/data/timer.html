@@ -43,14 +43,14 @@ button {
 
      <!-- fields for study and breake time -->
     <div id="fields">
-    <form class="fields" name="formname" onsubmit="return false">
+<!-- <form class="fields" name="formname" onsubmit="return false"> -->
     <label>Study time</label><br>
-    <input class="fields" data-role="timepicker" data-value="1" name="Study" id="Study" data-on-set="myLib.time.set"/><br>
+    <input class="fields" data-role="timepicker" data-value="01:00:00" name="Study" id="Study" data-on-set="myLib.time.set"/><br>
     <label>Break Time</label><br>
-    <input data-role="timepicker" data-value="1" name="Break" id="Break"><br>
+    <input data-role="timepicker" data-value="00:15:00" name="Break" id="Break"><br>
     </div>
     <button onclick="$('#time').data('countdown').start()">Start</button>
-    <button onclick="$('#time').data('countdown').pause()">Stop</button>
+  <!--     <button onclick="$('#time').data('countdown').pause()">Stop</button> -->
   </div>
 
 <script>
@@ -60,7 +60,7 @@ button {
           set: function(val){
 
     var tag_id = document.getElementById('counter');
-    tag_id.innerHTML = '<div class="timer" data-start="false" id="time" data-animate="slide" style="font-size: 80px" data-role="countdown" data-on-alarm="Break()" data-hours="'+ val[0] +'" data-minutes="'+ val[1] +'" data-seconds="' + val[2] + '"></div><br><p>Study</p>';
+    tag_id.innerHTML = '<div data-start="false" id="time" data-animate="slide" style="font-size: 80px" data-role="countdown" data-on-alarm="Break()" data-hours="'+ val[0] +'" data-minutes="'+ val[1] +'" data-seconds="' + val[2] + '"></div><br><p>Study</p>';
               }
         }
     }
@@ -69,7 +69,7 @@ button {
       var BreakTime = document.getElementById("Break").value;
 
       var tag_id = document.getElementById('counter');
-      tag_id.innerHTML = '<div class="timer" id="time" data-animate="slide" style="font-size: 80px" data-role="countdown"  data-hours="'+ BreakTime[0] + BreakTime[1] +'" data-minutes="'+ BreakTime[3] + BreakTime[4] +'" data-seconds="' + BreakTime[6] + BreakTime[7] + '"></div><br><p>Break</p>';
+      tag_id.innerHTML = '<div  id="time" data-animate="slide" style="font-size: 80px" data-role="countdown"  data-hours="'+ BreakTime[0] + BreakTime[1] +'" data-minutes="'+ BreakTime[3] + BreakTime[4] +'" data-seconds="' + BreakTime[6] + BreakTime[7] + '"></div><br><p>Break</p>';
 
     }
 
