@@ -6,7 +6,6 @@
       document.getElementById("startbutton").addEventListener("click", start);
       document.getElementById("setbutton").addEventListener("click", Set_value);
 
-        new_set=true;
         var timetake = document.getElementById("time");
         var datafield = document.getElementById("study").value;
         timetake.setAttribute("data-hours", datafield.slice(0,2));
