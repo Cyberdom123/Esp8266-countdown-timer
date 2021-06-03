@@ -24,7 +24,7 @@
       paused = false;
     }
 
-    var Inseconds = hours * 3600 + minutes * 60 + seconds;
+    Inseconds = hours * 3600 + minutes * 60 + seconds;
 
     var button = document.getElementById("pausebutton").addEventListener("click", pause);
     var button = document.getElementById("startbutton").addEventListener("click", start);
@@ -43,10 +43,13 @@
     function restart(set){
       if(restart){
         var timetake = document.getElementById("time");
-        var datafield = document.getElementById("study");
-        timetake.setAttrubute("data-hours", )
-        timetake.setAttrubute("data-minutes", )
-        timetake.setAttrubute("data-seconds", )
+        var datafield = document.getElementById("study").value;
+        timetake.setAttribute("data-hours", datafield.slice(0,2));
+        timetake.setAttribute("data-minutes", datafield.slice(3,5));
+        timetake.setAttribute("data-seconds", datafield.slice(6,8));
+
+        //create new time element
+        countdown();
       }
     }
 
