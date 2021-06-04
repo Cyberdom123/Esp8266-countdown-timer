@@ -40,6 +40,13 @@ void setup(){
     request->send(LittleFS, "/timer.html");
   });
 
+    server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(LittleFS, "/style.css", "text/css");
+  });
+    server.on("/timer.js", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(LittleFS, "/timer.js", "text/js");
+  });
+
   server.begin();
   display.clear();
   display.setBrightness(0x0f);
