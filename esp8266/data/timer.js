@@ -6,9 +6,10 @@
     }
 
     function Set_value(){
+      document.getElementById("setbutton").addEventListener("click", Refresh);
       document.getElementById("pausebutton").addEventListener("click", pause);
       document.getElementById("startbutton").addEventListener("click", start);
-      document.getElementById("setbutton").addEventListener("click", Refresh);
+      document.getElementById("refreshbutton").addEventListener("click", Refresh);
 
         var timetake = document.getElementById("time");
         var datafield = document.getElementById("study").value;
