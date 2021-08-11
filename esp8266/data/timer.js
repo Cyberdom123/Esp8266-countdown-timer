@@ -1,10 +1,14 @@
 // div time
   window.addEventListener('load', Set_value);
 
+    function Refresh(){
+      window.location.reload(true);
+    }
+
     function Set_value(){
       document.getElementById("pausebutton").addEventListener("click", pause);
       document.getElementById("startbutton").addEventListener("click", start);
-      document.getElementById("setbutton").addEventListener("click", Set_value);
+      document.getElementById("setbutton").addEventListener("click", Refresh);
 
         var timetake = document.getElementById("time");
         var datafield = document.getElementById("study").value;
@@ -58,7 +62,7 @@
             var minutes = Math.floor((Inseconds % 3600) / 60);
             var seconds = Math.floor(Inseconds % 60);
 
-            hours = hours < 10 ? '0' + hours : hours; //wow if in variablie awesome!
+            hours = hours < 10 ? '0' + hours : hours; //wow if in variablie it's awesome!
             minutes = minutes < 10 ? '0' + minutes : minutes;
             seconds = seconds < 10 ? '0' + seconds : seconds;
             time = (hours + ':' + minutes + ':' + seconds);
