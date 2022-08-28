@@ -4,37 +4,29 @@ body {
   background-color: #1e263a;
   color: #8f8e90;
 }
+
 p {
   text-align: center;
   font-size: 60px;
-  margin-top: 0px;
 }
 
 #forms{
-  position: sticky;
-  margin-left: 120px;
+  text-align: center;
 }
 
 #mainlabel{
   font-size: 40px;
 }
 
-#historylabel{
-  position: absolute;
-  top: 310px;
-  right: 120px;
-}
-
 #fieldslabel{
-  margin-left: 90px;
-  margin-top: 100px;
+  text-align: center;
 }
 
 #study, #break{
   text-align: center;
   width: 140px;
   margin-left:20px;
-  margin-top:20px;
+  margin-top:10px;
   background-color: black;
   color: #8f8e90;
   border-style: solid;
@@ -43,7 +35,7 @@ p {
 }
 
 #buttons{
-  margin-left: 85px;
+  text-align: center;
 }
 
 #time {

@@ -1,4 +1,3 @@
-// div time
   window.addEventListener('load', Set_value);
 
     function Refresh(){
@@ -6,7 +5,7 @@
     }
 
     function Set_value(){
-      document.getElementById("setbutton").addEventListener("click", Refresh);
+      document.getElementById("setbutton").addEventListener("click", Refresh); //Set function in not written!
       document.getElementById("pausebutton").addEventListener("click", pause);
       document.getElementById("startbutton").addEventListener("click", start);
       document.getElementById("refreshbutton").addEventListener("click", Refresh);
@@ -39,21 +38,33 @@
         }else{
           paused = false;
         }
+
         function pause(ispaused) {
           if(ispaused){
             paused = true;
           }
         }  
+
+        var timerStarted = false;
         function start(reset) {
-          if(start && paused){
+          if(paused){
             paused = false;
+          }
+          if(!timerStarted){
+            CountDown();
+            UpdateTimerValue();
           }
         }
 
-        Inseconds = hours * 3600 + minutes * 60 + seconds;
+        function UpdateTimerValue(){
+          var req = new XMLHttpRequest();
+          req.open('GET', "/Timer?value" + Inseconds, true);
+          req.send();
+        }
 
-        countdown();
-        function countdown(){
+        Inseconds = hours * 3600 + minutes * 60 + seconds;
+        function CountDown(){
+          timerStarted = true;
           setTimeout(function(){
           if(paused){
             timetake.innerHTML = time;
@@ -63,7 +74,7 @@
             var minutes = Math.floor((Inseconds % 3600) / 60);
             var seconds = Math.floor(Inseconds % 60);
 
-            hours = hours < 10 ? '0' + hours : hours; //wow if in variablie it's awesome!
+            hours = hours < 10 ? '0' + hours : hours; 
             minutes = minutes < 10 ? '0' + minutes : minutes;
             seconds = seconds < 10 ? '0' + seconds : seconds;
             time = (hours + ':' + minutes + ':' + seconds);
@@ -71,7 +82,7 @@
           }
           Inseconds--;
           if (Inseconds !== -1){
-            countdown();
+            CountDown();
           }
           }, 1000)
         }
