@@ -9,19 +9,19 @@
 #define DIO 2
 TM1637Display display(CLK, DIO);
 
-const char* ssid = "Pentagon";
-const char* password = "flatronslim";
+const char* ssid = "ZSP_Bud.A";
+const char* password = "zbuntowananastolatka12Q";
+
+String inputMessage;
+String inputParam;
+const char* PARAM_VALUE = "value";
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
 
-//The processor() function attributes a value to the placeholders we’ve created on the HTML file.
-//String processor(){
-
-//}
 
 void setup(){
-    Serial.begin(115200);
+    Serial.begin(19200);
 // Serial port for debugging purposes
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -37,6 +37,7 @@ void setup(){
 
 // What server do when client call a function
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
+    Serial.println("test!");
     request->send(LittleFS, "/timer.html");
   });
 
@@ -46,16 +47,21 @@ void setup(){
     server.on("/timer.js", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(LittleFS, "/timer.js", "text/js");
   });
+    server.on("/get", HTTP_GET, [](AsyncWebServerRequest *request){
+
+    if (request->hasParam(PARAM_VALUE)){
+      inputMessage = request -> getParam(PARAM_VALUE) -> value();
+      inputParam = PARAM_VALUE;
+    }else{
+      inputParam = "err";
+      inputMessage = "err";
+    }
+    Serial.println("testGet!");
+    request->send(LittleFS, "/timer.html");
+  });
 
   server.begin();
-  display.clear();
-  display.setBrightness(0x0f);
 }
 void loop(){
-  for (int i = 0; i < 9999; ++i)
-  {
-    display.showNumberDec(i);
-    delay(500); 
-  }
 
 }

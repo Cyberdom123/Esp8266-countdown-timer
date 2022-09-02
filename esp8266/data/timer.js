@@ -58,7 +58,7 @@
 
         function UpdateTimerValue(){
           var req = new XMLHttpRequest();
-          req.open('GET', "/Timer?value" + Inseconds, true);
+          req.open('GET', "/get?value=" + Inseconds, true);
           req.send();
         }
 
