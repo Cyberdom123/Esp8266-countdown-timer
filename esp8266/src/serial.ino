@@ -9,8 +9,8 @@
 #define DIO 2
 TM1637Display display(CLK, DIO);
 
-const char* ssid = "ZSP_Bud.A";
-const char* password = "zbuntowananastolatka12Q";
+const char* ssid = "";
+const char* password = "";
 
 String inputMessage;
 String inputParam;
@@ -24,10 +24,12 @@ void setup(){
     Serial.begin(19200);
 // Serial port for debugging purposes
   WiFi.begin(ssid, password);
+  Serial.println("Connecting to WiFi ");
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
-    Serial.println("Connecting to WiFi..");
+    Serial.print(".");
   }
+  Serial.println(" success!");
   Serial.println(WiFi.localIP());
 
   if(!LittleFS.begin()){
@@ -37,7 +39,7 @@ void setup(){
 
 // What server do when client call a function
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-    Serial.println("test!");
+    Serial.println("New client connected!");
     request->send(LittleFS, "/timer.html");
   });
 
@@ -47,8 +49,8 @@ void setup(){
     server.on("/timer.js", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(LittleFS, "/timer.js", "text/js");
   });
-    server.on("/get", HTTP_GET, [](AsyncWebServerRequest *request){
-
+    server.on("/get", HTTP_GET, [](AsyncWebServerRequest *request){ //add a protection for
+                                                                    //too much get request 
     if (request->hasParam(PARAM_VALUE)){
       inputMessage = request -> getParam(PARAM_VALUE) -> value();
       inputParam = PARAM_VALUE;
@@ -56,7 +58,11 @@ void setup(){
       inputParam = "err";
       inputMessage = "err";
     }
-    Serial.println("testGet!");
+
+    Serial.println("Timer on");
+    Serial.print("Value: ");
+    Serial.println(inputMessage);
+
     request->send(LittleFS, "/timer.html");
   });
 
