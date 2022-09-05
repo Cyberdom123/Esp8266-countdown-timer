@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 body {
-  background-color: #1e263a;
+  background-color: #0f1523;
   color: #8f8e90;
 }
 
@@ -14,24 +14,25 @@ p {
   text-align: center;
 }
 
-#mainlabel{
-  font-size: 40px;
-}
-
-#fieldslabel{
+#breaktime, #studytime{
   text-align: center;
+  font-size: 18px;
+  font-weight: 100px;
+  color: black;
 }
 
 #study, #break{
   text-align: center;
-  width: 140px;
-  margin-left:20px;
+  width: 150px;
+  padding-top: 4px;
+  padding-bottom: 4px; 
   margin-top:10px;
   background-color: black;
   color: #8f8e90;
+  border: none;
   border-style: solid;
-  border-radius: 3px;
-  border-color: #8f8e90;
+  border-radius: 8px;
+  border-color: #black;
 }
 
 #buttons{
@@ -39,25 +40,51 @@ p {
 }
 
 #time {
-  position: relative;
   font-family: 'Monoton', cursive;
+  margin: 0px auto 0px;
   text-align: center;
-  font-size: 140px;
+  font-size: 14vmin;
+}
+
+#form-screen{
+  text-align: center;
+  max-width: 390px;
+  padding: 15px 35px 45px;
+  margin: 30px auto 0px;
+  background-color: #8f8e90;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 15px;
+}
+
+#mainlabel{
+  font-size: 35px;
+  line-height: 40px;
+  text-align: center;
+  color: #8f8e90;
+}
+
+#fieldslabel{
+    margin: -18px -37px 18px;
+    padding: 15px;
+    background-color: black;
+    border-top-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px
 }
 
 button {
   width: 100px;
   background-color: black;
-  color: #8f8e90;
+  color: #8f8e90; 
   margin-top: 10px;
   margin-left: 5px;
   padding: 7px 10px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #8f8e90;
+  background-color: #1e263a;
   color: black;
 }
