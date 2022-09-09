@@ -1,6 +1,9 @@
   window.addEventListener('load', Set_value);
 
     function Refresh(){
+      var req = new XMLHttpRequest();
+      req.open('GET', "restart", true);
+      req.send();
       window.location.reload(true);
     }
 
@@ -46,7 +49,10 @@
       }
 
         function pause() {
-            paused = true;
+          var req = new XMLHttpRequest();
+          req.open('GET', "restart", true);
+          req.send();
+          paused = true;
         }  
 
         var timerStarted = false;
@@ -56,8 +62,8 @@
           }
           if(!timerStarted){
             CountDown();
-            UpdateTimerValue();
           }
+          UpdateTimerValue();
         }
 
         function UpdateTimerValue(){ //Send Inseconds value to server
@@ -70,7 +76,6 @@
           pause();
           InitializeTimer("study");
           pause(); 
-          UpdateTimerValue();
           
           hours = hours < 10 ? '0' + hours : hours; 
           minutes = minutes < 10 ? '0' + minutes : minutes;
