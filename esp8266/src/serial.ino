@@ -1,23 +1,25 @@
+#include <Arduino.h>
 #include <ESPAsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 #include <LittleFS.h>
-#include <Wire.h>
-#include <Arduino.h>
-#include "segmentDriver.h"
+#include "SevenSegmentDriver.h"
 
 unsigned long previousMillis = 0;
 unsigned long countedSeconds = 0;
 unsigned long Seconds = 0;
 int state = 1;
 
-const long interval = 2; //refresh display time in ms
+//refresh display time in ms
+const long interval = 2; 
 
-const char* ssid = "";
-const char* password = "";
+const char* ssid = "106A";
+const char* password = "uzrvhEK97dEKRJ";
 
 String inputMessage;
 String inputParam;
 const char* PARAM_VALUE = "value";
+
+Display display(16,5,4,0,2,14,12,12,1,3,15,13);
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
@@ -26,24 +28,26 @@ void ShowIPAddress(const IPAddress localIP){
   String ip = localIP.toString();
 
   String convertedString = "";
+  //divide ip address into segments
   for (unsigned int i = 0; i < ip.length() + 1; ++i)
   {
-    if(ip.substring(i,i+1) != "." && ip.substring(i,i+1) != ""){ //divide ip address into segments
+    if(ip.substring(i,i+1) != "." && ip.substring(i,i+1) != ""){ 
       convertedString += ip.substring(i,i+1); 
     }else{
-      ShowNuberDec(convertedString.toInt());
+      display.ShowNuberDec(convertedString.toInt());
 
       unsigned long countedSeconds = 0;
+      //show each segment of ip address for 1s      
       while(1){
-        if(countedSeconds >= 1000){ //show segment of ip address for 1s
+        if(countedSeconds >= 1000){ 
           countedSeconds = 0;
           break;
         }
-        delay(2);
-        HoldDisplay();
-        delay(2);
-        ClearDisplay();
-        countedSeconds += 2;
+        delay(interval);
+        display.HoldDisplay();
+        delay(interval);
+        display.ClearDisplay();
+        countedSeconds += interval;
       }
       convertedString = "";
     }
@@ -52,11 +56,7 @@ void ShowIPAddress(const IPAddress localIP){
 
 
 void setup(){
-  Initialilze();
-  //Serial port for debugging purposes
-  //Serial.begin(19200);
   WiFi.begin(ssid, password);
-  //Serial.println("Connecting to WiFi ");
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
   }
@@ -66,8 +66,12 @@ void setup(){
 
 // What server do when client send a request
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-    //Serial.println("New client connected!");
     request->send(LittleFS, "/timer.html");
+  });
+
+//If timer was set, send current status
+  server.on("/check", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(200, "text/plain", String(Seconds));
   });
 
     server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
@@ -78,8 +82,8 @@ void setup(){
     request->send(LittleFS, "/timer.js", "text/js");
   });
 
-    server.on("/get", HTTP_GET, [](AsyncWebServerRequest *request){ //add a protection for
-                                                                    //too much get request 
+    server.on("/get", HTTP_GET, [](AsyncWebServerRequest *request){ 
+                                                                    
     if (request->hasParam(PARAM_VALUE)){
       inputMessage = request -> getParam(PARAM_VALUE) -> value();
       inputParam = PARAM_VALUE;
@@ -106,17 +110,18 @@ void CountDown(unsigned long inSeconds){
     Seconds = inSeconds;
 }
 
-void loop(){
-  if (Seconds == 0)
+void loop(){ 
+//light up the counter only if countdown is enabled
+  if (Seconds == 0) 
   {
-    ClearDisplay();
+    display.ClearDisplay();
   }
-
+//Timer logic
   if(Seconds != 0){
     int hours = floor(Seconds / 3600);
     int minutes = floor((Seconds % 3600) / 60);
 
-    ShowNuberDec(hours * 100 + minutes);
+    display.ShowNuberDec(hours * 100 + minutes);
 
     if(countedSeconds >= 1000){
       countedSeconds = 0;
@@ -126,17 +131,16 @@ void loop(){
 
     if (currentMillis - previousMillis >= interval) {
       previousMillis = currentMillis;
-      countedSeconds = countedSeconds + 2;
+      countedSeconds = countedSeconds + interval;
 
       if(state == 0){
-        HoldDisplay();
+        display.HoldDisplay();
         state = 1;
       }else{
-        ClearDisplay();
+        display.ClearDisplay();
         state = 0;
       }
     }
   }
 }
-//send current status if timer was setipn
-//show ip address if timer was connected
+//send response if time is up

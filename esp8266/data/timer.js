@@ -1,5 +1,7 @@
-  window.addEventListener('load', Set_value);
+/*import HackTimer from "./HackTimer";*/
 
+window.addEventListener('load', Set_value);
+    
     function Refresh(){
       var req = new XMLHttpRequest();
       req.open('GET', "restart", true);
@@ -8,6 +10,10 @@
     }
 
     function Set_value(){
+      var req = new XMLHttpRequest(); //check if timer has been set up before
+      req.open('GET', "check", true);
+      req.send();
+
       document.getElementById("setbutton").addEventListener("click", setTimer); 
       document.getElementById("pausebutton").addEventListener("click", pause);
       document.getElementById("startbutton").addEventListener("click", start);
@@ -43,9 +49,11 @@
         }else{
           paused = false;
         }
+
         console.log("hours: " + hours + ", minutes: " + minutes + ", seconds:" + seconds);
         Inseconds = hours * 3600 + minutes * 60 + seconds;
         console.log(Inseconds);
+
       }
 
         function pause() {
@@ -82,6 +90,7 @@
           seconds = seconds < 10 ? '0' + seconds : seconds;
           time = (hours + ':' + minutes + ':' + seconds);
           timetake.innerHTML = time;
+          document.title = time;
         }
 
         var currentType = "study";
@@ -102,10 +111,10 @@
               seconds = seconds < 10 ? '0' + seconds : seconds;
               time = (hours + ':' + minutes + ':' + seconds);
               timetake.innerHTML = time;
+              document.title = time;
             }
             Inseconds--;
             breakmark:{ //go here in order to swap break/study times
-            //console.log(Inseconds);
             if(Inseconds !== -1){
               CountDown();
             }
@@ -129,5 +138,21 @@
             }
           }
             }, 1000)
-          }
       }
+
+    async function CheckTimer() {
+      let response = await fetch('/check');
+      let responseData = await response.text();
+      console.log(responseData);
+
+      let currentTime = parseInt(responseData);
+      if(currentTime > 0){
+          Inseconds = currentTime;
+          paused = false;
+          CountDown();
+        }
+    }
+    CheckTimer();
+  }
+//Ask user to for break, then send data to the server
+//Add timer worker
