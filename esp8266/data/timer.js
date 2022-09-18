@@ -20,6 +20,13 @@ window.addEventListener('load', Set_value);
       document.getElementById("refreshbutton").addEventListener("click", Refresh);
 
       function InitializeTimer(type){ //add a datafield choose study/break
+        if(type == "study"){
+          document.body.style.backgroundColor = "#5a2020";
+        }
+        if(type == "break"){
+          document.body.style.backgroundColor = "#0f1523";
+        }
+        
         timetake = document.getElementById("time");
         var datafield = document.getElementById(type).value;
         timetake.setAttribute("data-hours", datafield.slice(0,2));
@@ -155,4 +162,5 @@ window.addEventListener('load', Set_value);
     CheckTimer();
   }
 //Ask user to for break, then send data to the server
+//switch color on break
 //Add timer worker

@@ -12,8 +12,8 @@ int state = 1;
 //refresh display time in ms
 const long interval = 2; 
 
-const char* ssid = "106A";
-const char* password = "uzrvhEK97dEKRJ";
+const char* ssid = "";
+const char* password = "";
 
 String inputMessage;
 String inputParam;
@@ -54,6 +54,10 @@ void ShowIPAddress(const IPAddress localIP){
   }
 }
 
+void CountDown(unsigned long inSeconds){
+    delay(8000);
+    Seconds = inSeconds;
+}
 
 void setup(){
   WiFi.begin(ssid, password);
@@ -76,6 +80,10 @@ void setup(){
 
     server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(LittleFS, "/style.css", "text/css");
+  });
+    
+    server.on("/favicon.ico", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(LittleFS, "/favicon.png", "image/x-icon");
   });
 
     server.on("/timer.js", HTTP_GET, [](AsyncWebServerRequest *request){
@@ -103,11 +111,6 @@ void setup(){
   });
 
   server.begin();
-}
-
-void CountDown(unsigned long inSeconds){
-    delay(8000);
-    Seconds = inSeconds;
 }
 
 void loop(){ 

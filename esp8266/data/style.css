@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 body {
-  background-color: #0f1523;
+  background-color: #5a2020;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+
   color: #8f8e90;
 }
 
@@ -85,6 +91,6 @@ button {
 }
 
 button:hover {
-  background-color: #1e263a;
-  color: black;
+  background-color: #1b1b1b;
+  transition: all 0.4s ease-in-out;
 }
