@@ -1,7 +1,11 @@
-/*import HackTimer from "./HackTimer";*/
-
 window.addEventListener('load', Set_value);
-    
+    //send current type to server
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === 'visible') {
+        location.reload(); //check if timer has been set up before, not reload whole page
+      }
+    };
+      
     function Refresh(){
       var req = new XMLHttpRequest();
       req.open('GET', "restart", true);
@@ -98,8 +102,8 @@ window.addEventListener('load', Set_value);
           time = (hours + ':' + minutes + ':' + seconds);
           timetake.innerHTML = time;
           document.title = time;
-        }
-
+        } 
+    
         var currentType = "study";
         InitializeTimer(currentType);
         function CountDown(){

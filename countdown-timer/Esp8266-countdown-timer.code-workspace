@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "esp8266",
+			"path": "."
+		},
+		{
+			"name": "tests",
+			"path": "../../../Documents/PlatformIO/Projects/tests"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Esp8266-countdown-timer"
+	}
+}
