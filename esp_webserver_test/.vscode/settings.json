@@ -1,0 +1,10 @@
+{
+    "idf.adapterTargetName": "esp8266",
+    "files.associations": {
+        "event_groups.h": "c",
+        "esp_system.h": "c",
+        "esp_wifi.h": "c",
+        "sys.h": "c"
+    },
+    "cmake.configureOnOpen": false
+}

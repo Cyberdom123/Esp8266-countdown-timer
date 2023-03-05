@@ -1,0 +1,473 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      The system is: Linux - 6.1.13-200.fc37.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/3.26.0-rc4/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/3.26.0-rc4/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-o7USye"
+      binary: "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-o7USye"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-o7USye
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_90107/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_90107.dir/build.make CMakeFiles/cmTC_90107.dir/build
+        gmake[1]: Entering directory '/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-o7USye'
+        Building C object CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o
+        /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc   -v -o CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc
+        Target: xtensa-lx106-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes
+        Thread model: posix
+        gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o' '-c'
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1 -quiet -v -iprefix /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -auxbase-strip CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc2cMXzq.s
+        GNU C17 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)
+        	compiled by GNU C version 4.9.2, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/include"
+        ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed"
+        ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include"
+        ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include
+        End of search list.
+        GNU C17 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)
+        	compiled by GNU C version 4.9.2, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 48e58fa3e6eb2de9fad439857fcdf42a
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o' '-c'
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format -o CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o /tmp/cc2cMXzq.s
+        COMPILER_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/
+        LIBRARY_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o' '-c'
+        Linking C executable cmTC_90107
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90107.dir/link.txt --verbose=1
+        /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc  -v CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o -o cmTC_90107 
+        Using built-in specs.
+        COLLECT_GCC=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc
+        COLLECT_LTO_WRAPPER=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper
+        Target: xtensa-lx106-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes
+        Thread model: posix
+        gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) 
+        COMPILER_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/
+        LIBRARY_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_90107'
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpr2pkx.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_90107 /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/crt0.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crti.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o -lgcc -lc -lnosys -lc -lgcc /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_90107'
+        gmake[1]: Leaving directory '/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-o7USye'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include]
+          add: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed]
+          add: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include]
+          add: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include]
+        end of search list found
+        collapse include dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include]
+        collapse include dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed]
+        collapse include dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include]
+        collapse include dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/include]
+        implicit include dirs: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(xtensa-lx106-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-o7USye]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_90107/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_90107.dir/build.make CMakeFiles/cmTC_90107.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-o7USye']
+        ignore line: [Building C object CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc   -v -o CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc]
+        ignore line: [Target: xtensa-lx106-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o' '-c']
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1 -quiet -v -iprefix /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -auxbase-strip CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc2cMXzq.s]
+        ignore line: [GNU C17 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)]
+        ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.19-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/include"]
+        ignore line: [ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include"]
+        ignore line: [ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include]
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed]
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include]
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)]
+        ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.19-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 48e58fa3e6eb2de9fad439857fcdf42a]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o' '-c']
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format -o CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o /tmp/cc2cMXzq.s]
+        ignore line: [COMPILER_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o' '-c']
+        ignore line: [Linking C executable cmTC_90107]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90107.dir/link.txt --verbose=1]
+        ignore line: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc  -v CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o -o cmTC_90107 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper]
+        ignore line: [Target: xtensa-lx106-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) ]
+        ignore line: [COMPILER_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_90107']
+        link line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpr2pkx.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_90107 /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/crt0.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crti.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o -lgcc -lc -lnosys -lc -lgcc /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o]
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccpr2pkx.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_90107] ==> ignore
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/crt0.o] ==> obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/crt0.o]
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crti.o] ==> obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crti.o]
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o] ==> obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o]
+          arg [-L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0] ==> dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0]
+          arg [-L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc] ==> dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc]
+          arg [-L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib] ==> dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib]
+          arg [CMakeFiles/cmTC_90107.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o] ==> obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o]
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o] ==> obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o]
+        collapse obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/crt0.o] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/lib/crt0.o]
+        collapse obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crti.o] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crti.o]
+        collapse obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o]
+        collapse obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o]
+        collapse obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o]
+        collapse library dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0]
+        collapse library dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc]
+        collapse library dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/lib]
+        implicit libs: [gcc;c;nosys;c;gcc]
+        implicit objs: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/lib/crt0.o;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crti.o;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o]
+        implicit dirs: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-whcUI6"
+      binary: "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-whcUI6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-whcUI6
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_20b23/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_20b23.dir/build.make CMakeFiles/cmTC_20b23.dir/build
+        gmake[1]: Entering directory '/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-whcUI6'
+        Building CXX object CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o
+        /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++   -v -o CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++
+        Target: xtensa-lx106-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes
+        Thread model: posix
+        gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o' '-c'
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1plus -quiet -v -iprefix /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -auxbase-strip CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccOduGk8.s
+        GNU C++14 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)
+        	compiled by GNU C version 4.9.2, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0"
+        ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/xtensa-lx106-elf"
+        ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/backward"
+        ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/include"
+        ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed"
+        ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include"
+        ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/xtensa-lx106-elf
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/backward
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include
+        End of search list.
+        GNU C++14 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)
+        	compiled by GNU C version 4.9.2, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 6a42b2f4729ac0ea49ccdcd6bf20e2e4
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o' '-c'
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format -o CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccOduGk8.s
+        COMPILER_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/
+        LIBRARY_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o' '-c'
+        Linking CXX executable cmTC_20b23
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20b23.dir/link.txt --verbose=1
+        /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++  -v CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_20b23 
+        Using built-in specs.
+        COLLECT_GCC=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++
+        COLLECT_LTO_WRAPPER=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper
+        Target: xtensa-lx106-elf
+        Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes
+        Thread model: posix
+        gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) 
+        COMPILER_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/
+        LIBRARY_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_20b23'
+         /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbuHg0f.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_20b23 /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/crt0.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crti.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_20b23'
+        gmake[1]: Leaving directory '/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-whcUI6'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0]
+          add: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/xtensa-lx106-elf]
+          add: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/backward]
+          add: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include]
+          add: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed]
+          add: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include]
+          add: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include]
+        end of search list found
+        collapse include dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/include/c++/8.4.0]
+        collapse include dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/xtensa-lx106-elf] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/include/c++/8.4.0/xtensa-lx106-elf]
+        collapse include dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/backward] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/include/c++/8.4.0/backward]
+        collapse include dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include]
+        collapse include dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed]
+        collapse include dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include]
+        collapse include dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/include]
+        implicit include dirs: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/include/c++/8.4.0;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/include/c++/8.4.0/xtensa-lx106-elf;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/include/c++/8.4.0/backward;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(xtensa-lx106-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-whcUI6]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_20b23/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_20b23.dir/build.make CMakeFiles/cmTC_20b23.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/build/CMakeFiles/CMakeScratch/TryCompile-whcUI6']
+        ignore line: [Building CXX object CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++   -v -o CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++]
+        ignore line: [Target: xtensa-lx106-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o' '-c']
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1plus -quiet -v -iprefix /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -auxbase-strip CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccOduGk8.s]
+        ignore line: [GNU C++14 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)]
+        ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.19-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0"]
+        ignore line: [ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/xtensa-lx106-elf"]
+        ignore line: [ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/backward"]
+        ignore line: [ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/include"]
+        ignore line: [ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include"]
+        ignore line: [ignoring duplicate directory "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/../../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0]
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/xtensa-lx106-elf]
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include/c++/8.4.0/backward]
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include]
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed]
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/sys-include]
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++14 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)]
+        ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.19-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 6a42b2f4729ac0ea49ccdcd6bf20e2e4]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o' '-c']
+        ignore line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format -o CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccOduGk8.s]
+        ignore line: [COMPILER_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o' '-c']
+        ignore line: [Linking CXX executable cmTC_20b23]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20b23.dir/link.txt --verbose=1]
+        ignore line: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++  -v CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_20b23 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper]
+        ignore line: [Target: xtensa-lx106-elf]
+        ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) ]
+        ignore line: [COMPILER_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_20b23']
+        link line: [ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbuHg0f.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -o cmTC_20b23 /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/crt0.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crti.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o]
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccbuHg0f.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_20b23] ==> ignore
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/crt0.o] ==> obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/crt0.o]
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crti.o] ==> obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crti.o]
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o] ==> obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o]
+          arg [-L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0] ==> dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0]
+          arg [-L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc] ==> dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc]
+          arg [-L/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib] ==> dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib]
+          arg [CMakeFiles/cmTC_20b23.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o] ==> obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o]
+          arg [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o] ==> obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o]
+        collapse obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/crt0.o] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/lib/crt0.o]
+        collapse obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crti.o] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crti.o]
+        collapse obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o]
+        collapse obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o]
+        collapse obj [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o]
+        collapse library dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0]
+        collapse library dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc]
+        collapse library dir [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib] ==> [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/lib]
+        implicit libs: [stdc++;m;gcc;c;nosys;c;gcc]
+        implicit objs: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/lib/crt0.o;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crti.o;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtbegin.o;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtend.o;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/crtn.o]
+        implicit dirs: [/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/lib/gcc;/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/xtensa-lx106-elf/xtensa-lx106-elf/lib]
+        implicit fwks: []
+      
+      
+...

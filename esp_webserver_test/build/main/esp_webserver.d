@@ -97,7 +97,11 @@ esp_webserver.o: \
  /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/lwip/lwip/src/include/lwip/errno.h \
  /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/lwip/lwip/src/include/lwip/api.h \
  /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/lwip/lwip/src/include/lwip/netbuf.h \
- /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/lwip/lwip/src/include/lwip/netdb.h
+ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/lwip/lwip/src/include/lwip/netdb.h \
+ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/gpio.h \
+ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/pin_mux_register.h \
+ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
+ /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/gpio_register.h
 
 /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -294,4 +298,12 @@ esp_webserver.o: \
 /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/lwip/lwip/src/include/lwip/netbuf.h:
 
 /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/lwip/lwip/src/include/lwip/netdb.h:
+
+/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/gpio.h:
+
+/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/pin_mux_register.h:
+
+/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h:
+
+/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/gpio_register.h:
 /home/dom/Documents/Coding/esp8266-rtos-sdk/esp/Esp8266-countdown-timer/esp_webserver_test/main/./esp_webserver.c:

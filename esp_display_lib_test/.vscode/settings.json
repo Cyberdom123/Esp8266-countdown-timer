@@ -1,0 +1,14 @@
+{
+    "idf.adapterTargetName": "esp8266",
+    "files.associations": {
+        "event_groups.h": "c",
+        "esp_system.h": "c",
+        "esp_wifi.h": "c",
+        "gpio.h": "c",
+        "dispaly_driver.h": "c",
+        "task.h": "c",
+        "freertos.h": "c"
+    },
+    "cmake.configureOnOpen": false,
+    "C_Cpp.dimInactiveRegions": false
+}

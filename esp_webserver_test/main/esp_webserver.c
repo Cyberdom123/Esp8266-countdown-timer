@@ -17,10 +17,14 @@
 #include <lwip/api.h>
 #include <lwip/netdb.h>
 
+#include "driver/gpio.h"
 
-#define EXAMPLE_ESP_WIFI_SSID      ""
-#define EXAMPLE_ESP_WIFI_PASS      ""
+#define EXAMPLE_ESP_WIFI_SSID      "Phone_1_8560"
+#define EXAMPLE_ESP_WIFI_PASS      "5rj4n97hci4ga2"
 #define EXAMPLE_ESP_MAXIMUM_RETRY  CONFIG_ESP_MAXIMUM_RETRY
+
+#define GPIO_OUTPUT_IO_0    2
+#define GPIO_OUTPUT_PIN_SEL     (1ULL << GPIO_OUTPUT_IO_0)
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;
@@ -34,6 +38,30 @@ static EventGroupHandle_t s_wifi_event_group;
 static const char *TAG = "wifi station";
 
 static int s_retry_num = 0;
+
+void gpio_init(){
+    gpio_config_t io_conf;
+    io_conf.intr_type = GPIO_INTR_DISABLE;
+    io_conf.mode = GPIO_MODE_OUTPUT;
+    io_conf.pin_bit_mask = GPIO_OUTPUT_PIN_SEL;
+    io_conf.pull_down_en = 0;
+    io_conf.pull_up_en = 0;
+    gpio_config(&io_conf);
+    
+    gpio_set_level(GPIO_OUTPUT_IO_0, 1);
+}
+
+void blink_led(){
+    while(1){
+        gpio_set_level(GPIO_OUTPUT_IO_0, 1);
+        printf("led high \n");
+        vTaskDelay(1000/portTICK_RATE_MS);
+        gpio_set_level(GPIO_OUTPUT_IO_0, 0);
+        printf("led low \n");
+        vTaskDelay(1000/portTICK_RATE_MS);
+
+    }
+}
 
 static void event_handler(void* arg, esp_event_base_t event_base,
                                 int32_t event_id, void* event_data)
@@ -121,9 +149,29 @@ void wifi_init_sta(void)
 esp_err_t get_webpage_handler(httpd_req_t *req){
     /* Send http response */
     const char resp[] = "URI GET Response";
-    httpd_resp_send(req, resp, HTTPD_MAX_URI_LEN);
+    httpd_resp_send(req, resp, strlen(resp));
     return ESP_OK;
 }
+
+esp_err_t led_on_handler(httpd_req_t *req){
+    /* Send http response */
+    const char resp[] = "LED on";
+    httpd_resp_send(req, resp, strlen(resp));
+    gpio_set_level(GPIO_OUTPUT_IO_0, 0);
+    printf("led high \n");
+    return ESP_OK;
+}
+
+esp_err_t led_off_handler(httpd_req_t *req){
+    /* Send http response */
+    const char resp[] = "led of";
+    httpd_resp_send(req, resp, strlen(resp));
+    gpio_set_level(GPIO_OUTPUT_IO_0, 1);
+    printf("led low \n");
+    return ESP_OK;
+}
+
+
 
 httpd_uri_t uri_get = {
     .uri = "/",
@@ -132,6 +180,19 @@ httpd_uri_t uri_get = {
     .user_ctx = NULL
 };
 
+httpd_uri_t uri_led_on = {
+    .uri = "/on",
+    .method = HTTP_GET,
+    .handler = led_on_handler,
+    .user_ctx = NULL
+};
+
+httpd_uri_t uri_led_off = {
+    .uri = "/off",
+    .method = HTTP_GET,
+    .handler = led_off_handler,
+    .user_ctx = NULL
+};
 
 httpd_handle_t setup_server(){
     /* Generate default configuration */
@@ -142,14 +203,17 @@ httpd_handle_t setup_server(){
     if (httpd_start(&server, &config) == ESP_OK) {
         /* Register URI handlers */
         httpd_register_uri_handler(server, &uri_get);
+        httpd_register_uri_handler(server, &uri_led_on);
+        httpd_register_uri_handler(server, &uri_led_off);
+
     }
     /* If server failed to start, handle will be NULL */
     return server;   
-} 
-
+}
 
 void app_main()
 {
+    gpio_init();
     ESP_ERROR_CHECK(nvs_flash_init());
 
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
