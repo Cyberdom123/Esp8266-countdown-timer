@@ -14,6 +14,7 @@ typedef struct
     uint8_t din;
     uint8_t clk;
     uint8_t out_en;
+    uint8_t rst;
 
     uint16_t data;
     uint8_t dot;

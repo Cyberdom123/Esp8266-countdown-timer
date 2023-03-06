@@ -7,7 +7,8 @@
                 "${workspaceFolder}/build/include/*",
                 "${workspaceFolder}/main/include/",
                 "${IDF_PATH}/components/**",
-                "${IDF_PATH}/components/freertos/port/esp8266/include"
+                "${IDF_PATH}/components/freertos/port/esp8266/include",
+                "/home/dom/Documents/Coding/esp8266-rtos-sdk/esp/ESP8266_RTOS_SDK/components/freertos/include"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
