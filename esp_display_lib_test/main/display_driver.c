@@ -43,9 +43,9 @@ void reset_display(display *display){ //output register doesnt work, use output 
 
     gpio_set_level(display->out_en, 1);
     //vTaskDelay(1/portTICK_RATE_MS);
-    ets_delay_us(20);
+    ets_delay_us(5);
     gpio_set_level(display->out_en, 0);
-    ets_delay_us(20);
+    ets_delay_us(5);
     //vTaskDelay(1/portTICK_RATE_MS);
 
     gpio_set_level(display->rst, 1);
@@ -103,8 +103,8 @@ void run_display(display *display){
             }
             
             gpio_set_level(display->out_en, 1); //not working
-            vTaskDelay(2/portTICK_RATE_MS);
-            //ets_delay_us(600);
+            //vTaskDelay(2/portTICK_RATE_MS);
+            ets_delay_us(2000);
             gpio_set_level(display->out_en, 0);
             //vTaskDelay(1/portTICK_RATE_MS);
             

@@ -64,6 +64,6 @@ void app_main()
 {
     gpio_init();
     //display_test();
-    xTaskCreate(blink_task, "blink", 2048, NULL, 2, NULL);
+    //xTaskCreate(blink_task, "blink", 2048, NULL, 2, NULL);
     xTaskCreate(display_test, "display", 4096, NULL, 1, NULL);
 }
